@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+body .mode {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  border: 1px solid;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+body .mode:hover {
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 6px;
+}
+body .mode .hidden {
+  background-color: red;
+  display: none;
+}
+body #insert {
+  margin-top: 50px;
+}
+body #insert .box {
+  background-color: #eee;
+  color: #666;
+  font-weight: 300;
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 3rem;
+  padding: 12px;
+  border-radius: 10px;
+  min-width: 150px;
+  position: relative;
+}
+body #insert .box small {
+  position: absolute;
+  top: -24px;
+  color: #aaa;
+}
+body .keyboard {
+  background-color: #eee;
+  position: relative;
+  border-radius: 10px;
+  padding: 5px;
+}
+body .keyboard .row {
+  display: flex;
+}
+body .keyboard .row .key {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  color: #bbb;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  padding-top: 5px;
+  margin: 5px;
+  text-shadow: rgba(255, 255, 255, 0.6784313725) 0px 1px 3px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+body .keyboard .row .backspace-key,
+body .keyboard .row .capslock-key {
+  width: 100px;
+}
+body .keyboard .row .tab-key,
+body .keyboard .row .slash-key {
+  width: 75px;
+}
+body .keyboard .row .enter-key {
+  width: 110px;
+}
+body .keyboard .row .shift-key-l {
+  width: 130px;
+}
+body .keyboard .row .shift-key-r {
+  width: 140px;
+}
+body .keyboard .row .space-key {
+  width: 460px;
+}
+body .keyboard .row .fn-key {
+  width: 60px;
+}
+
+.dark-mode {
+  background-color: #121212;
+}
+.dark-mode .mode {
+  color: #fff;
+  border-color: #fff;
+}
+.dark-mode .mode:hover {
+  box-shadow: #f000ff 0px 0px 10px;
+}
+.dark-mode .mode:hover i {
+  filter: drop-shadow(#f000ff 2px 2px 20px);
+}
+.dark-mode #insert .box {
+  background-color: #2a2a2a;
+  color: #999;
+  box-shadow: #f000ff 0px 0px 10px;
+}
+.dark-mode .keyboard {
+  background-color: #2a2a2a;
+  box-shadow: 0px 0px 10px #001eff;
+  animation: shadow-animation 10s infinite;
+}
+.dark-mode .keyboard .keyboard-keys .row .key {
+  background-color: #121212;
+  text-shadow: none;
+}
+
+@keyframes shadow-animation {
+  0% {
+    box-shadow: 0px 0px 10px #001eff;
+  } /* First color */
+  25% {
+    box-shadow: 0px 0px 10px #4deeea;
+  } /* Second color */
+  50% {
+    box-shadow: 0px 0px 10px #74ee15;
+  } /* Third color */
+  75% {
+    box-shadow: 0px 0px 10px #ffe700;
+  } /* Fourth color */
+  100% {
+    box-shadow: 0px 0px 10px #f000ff;
+  } /* Back to the first color */
+}/*# sourceMappingURL=main.css.map */
